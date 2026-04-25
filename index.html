@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>WTP2 · Оля на связи</title>
+<meta name="description" content="Помогаем HNWI-семьям устроиться в UAE. Банк, компания, виза, завещания — в одной команде. Оля будет на встрече Bluewaters 6 мая.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:title" content="WTP2 · Оля на связи">
+<meta property="og:description" content="Одна команда — один разговор. Банк, компания, виза, документы для семей в UAE.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0B1220;
+    --navy-soft:#1a2333;
+    --cream:#F5F3EE;
+    --cream-soft:#FAFAF7;
+    --gold:#C8A96A;
+    --gold-soft:#D9C18A;
+    --text:#1A1A1A;
+    --muted:#6B7280;
+    --border:#E5E0D6;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(11,18,32,.06), 0 8px 24px rgba(11,18,32,.04);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter','SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    color:var(--text);background:var(--cream);
+    font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  }
+  ::selection{background:var(--gold);color:var(--navy)}
+  a{color:var(--navy);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{color:var(--gold)}
+  .display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+  .container{max-width:760px;margin:0 auto;padding:0 24px}
+  .container-wide{max-width:920px;margin:0 auto;padding:0 24px}
+
+  /* HERO */
+  .hero{
+    background:var(--navy);
+    color:var(--cream);
+    min-height:100dvh;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:32px 0 40px;
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(1200px 600px at 80% 110%, rgba(200,169,106,.08), transparent 60%),
+               radial-gradient(800px 400px at 0% 0%, rgba(200,169,106,.04), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.04em;font-size:14px}
+  .brand-mark{
+    width:28px;height:28px;border-radius:6px;background:var(--gold);
+    display:flex;align-items:center;justify-content:center;color:var(--navy);
+    font-weight:700;font-size:13px;font-family:'Cormorant Garamond',serif;
+  }
+  .hero-meta{font-size:12px;color:rgba(245,243,238,.6);letter-spacing:.06em;text-transform:uppercase}
+
+  .hero-body{display:flex;flex-direction:column;gap:24px;position:relative;z-index:1;padding-top:60px}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;
+  }
+  .kicker::before{content:"";display:inline-block;width:24px;height:1px;background:var(--gold)}
+  h1.hero-title{
+    font-size:clamp(36px,7vw,64px);line-height:1.05;
+    font-weight:600;letter-spacing:-.02em;
+  }
+  h1 .accent{color:var(--gold);font-style:italic}
+  .hero-sub{
+    font-size:clamp(16px,2vw,19px);line-height:1.55;
+    color:rgba(245,243,238,.82);max-width:600px;
+  }
+  .hero-meta-row{
+    display:flex;flex-wrap:wrap;gap:8px 24px;
+    font-size:13px;color:rgba(245,243,238,.6);
+    border-top:1px solid rgba(245,243,238,.12);
+    padding-top:20px;
+  }
+  .hero-meta-row span{display:inline-flex;align-items:center;gap:6px}
+  .hero-meta-row span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold)}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:relative;z-index:1}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 28px;border-radius:999px;
+    font-size:15px;font-weight:600;letter-spacing:.01em;
+    text-decoration:none;transition:transform .15s ease,box-shadow .2s ease,background .2s ease;
+    cursor:pointer;border:none;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 8px 24px rgba(200,169,106,.25)}
+  .btn-primary:hover{background:var(--gold-soft);color:var(--navy)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(245,243,238,.25)}
+  .btn-ghost:hover{background:rgba(245,243,238,.06);color:var(--cream)}
+  .btn-arrow{display:inline-block;transition:transform .2s ease}
+  .btn:hover .btn-arrow{transform:translateX(3px)}
+
+  /* SECTIONS */
+  section{padding:72px 0}
+  section.muted{background:var(--cream-soft)}
+  .section-kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+  .section-title{font-size:clamp(26px,4vw,38px);line-height:1.15;font-weight:600;letter-spacing:-.015em;margin-bottom:40px}
+
+  /* PRODUCTS */
+  .products{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:720px){ .products{grid-template-columns:repeat(3,1fr);gap:20px} }
+  .product{
+    background:#fff;border:1px solid var(--border);
+    border-radius:var(--radius);padding:28px 24px;
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+    position:relative;
+  }
+  .product:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--gold)}
+  .product-icon{
+    width:42px;height:42px;border-radius:10px;
+    background:var(--cream);display:flex;align-items:center;justify-content:center;
+    margin-bottom:18px;color:var(--navy);
+  }
+  .product h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;color:var(--navy)}
+  .product p{font-size:14.5px;line-height:1.55;color:var(--muted)}
+  .product .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+  .tag{font-size:11px;padding:4px 10px;border-radius:999px;background:var(--cream);color:var(--navy);letter-spacing:.02em}
+
+  .bridge{
+    margin-top:36px;padding:24px 28px;
+    background:#fff;border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;
+    font-size:16px;line-height:1.6;
+  }
+  .bridge strong{color:var(--navy)}
+
+  /* EVENT BLOCK */
+  .event{
+    background:var(--navy);color:var(--cream);
+    padding:60px 0;
+    border-radius:0;
+  }
+  .event .section-kicker{color:var(--gold)}
+  .event-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:start}
+  @media(min-width:720px){.event-grid{grid-template-columns:1.4fr 1fr}}
+  .event h2{font-size:clamp(26px,4vw,36px);line-height:1.15;font-weight:600;letter-spacing:-.015em;margin-bottom:18px;color:var(--cream)}
+  .event-body{font-size:16px;line-height:1.65;color:rgba(245,243,238,.82)}
+  .event-body p{margin-bottom:14px}
+  .event-body strong{color:var(--cream)}
+  .hosts{display:flex;flex-direction:column;gap:14px;background:rgba(245,243,238,.04);padding:24px;border-radius:var(--radius);border:1px solid rgba(245,243,238,.1)}
+  .host{display:flex;gap:14px;align-items:flex-start}
+  .host-avatar{
+    width:44px;height:44px;border-radius:50%;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--gold-soft) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--navy);font-weight:600;font-size:16px;flex-shrink:0;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .host-name{font-weight:600;color:var(--cream);font-size:15px;margin-bottom:2px}
+  .host-role{font-size:13px;color:rgba(245,243,238,.6);line-height:1.4}
+  .event-cta{margin-top:24px}
+
+  /* FORM ACCORDION */
+  .form-section{padding:56px 0}
+  details.form-acc{
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    overflow:hidden;
+  }
+  details.form-acc summary{
+    padding:20px 24px;cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;
+    font-weight:500;font-size:15.5px;color:var(--navy);
+    transition:background .2s ease;
+  }
+  details.form-acc summary:hover{background:var(--cream-soft)}
+  details.form-acc summary::-webkit-details-marker{display:none}
+  details.form-acc summary .chev{transition:transform .25s ease;color:var(--muted)}
+  details.form-acc[open] summary .chev{transform:rotate(180deg)}
+  .form-body{padding:8px 24px 24px;border-top:1px solid var(--border)}
+  .form-body p{font-size:14px;color:var(--muted);margin-bottom:18px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:13px;font-weight:500;color:var(--navy);margin-bottom:6px}
+  .field input{
+    width:100%;padding:14px 16px;
+    border:1px solid var(--border);border-radius:10px;
+    font-family:inherit;font-size:15px;color:var(--text);
+    background:var(--cream-soft);
+    transition:border-color .15s ease,background .15s ease;
+  }
+  .field input:focus{outline:none;border-color:var(--gold);background:#fff}
+  .checkbox{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);margin:14px 0 18px;cursor:pointer}
+  .checkbox input{margin-top:3px;flex-shrink:0}
+  .submit-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .form-consent{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.5}
+  .form-success{
+    display:none;padding:20px;border-radius:10px;
+    background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46;
+    font-size:14.5px;line-height:1.5;
+  }
+  .form-success.visible{display:block}
+
+  /* FOOTER */
+  footer{
+    padding:48px 0 32px;border-top:1px solid var(--border);
+    background:var(--cream-soft);
+  }
+  .footer-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .footer-brand{font-size:13px;color:var(--muted);font-weight:500}
+  .footer-links{display:flex;gap:18px;font-size:13px}
+  .footer-links a{color:var(--muted);text-decoration:none}
+  .footer-links a:hover{color:var(--navy)}
+  .footer-meta{font-size:11px;color:var(--muted);margin-top:18px;letter-spacing:.04em}
+
+  /* MICRO ANIMATIONS */
+  @media (prefers-reduced-motion: no-preference){
+    .hero-body, .products, .bridge, .event-grid, .form-acc{
+      animation:fadeUp .6s ease both;
+    }
+    .products{animation-delay:.05s}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  }
+
+  /* MOBILE TUNING */
+  @media(max-width:480px){
+    .container,.container-wide{padding:0 20px}
+    section{padding:56px 0}
+    .hero{padding:24px 0 32px}
+    .hero-body{padding-top:40px;gap:20px}
+    .btn{padding:14px 22px;font-size:14.5px;width:100%;justify-content:center}
+    .hero-cta{flex-direction:column;align-items:stretch;width:100%}
+    .product{padding:24px 20px}
+    .event{padding:48px 0}
+    .footer-row{flex-direction:column;align-items:flex-start;gap:14px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="container hero-top">
+    <div class="brand">
+      <div class="brand-mark">W</div>
+      <span>WTP2</span>
+    </div>
+    <div class="hero-meta">Dubai · с 2018</div>
+  </div>
+
+  <div class="container hero-body">
+    <span class="kicker">Семьи в UAE — в одной команде</span>
+    <h1 class="display hero-title">Познакомьтесь — WTP2.<br><span class="accent">Оля на связи.</span></h1>
+    <p class="hero-sub">
+      Помогаем HNWI-семьям устроиться в UAE — от банковского счёта до завещаний.
+      Оля и Иван (founder) будут на встрече Bluewaters 6 мая. Подходите поздороваться, или напишите заранее.
+    </p>
+    <div class="hero-meta-row">
+      <span>Команда из 5 специалистов</span>
+      <span>Banking-first подход</span>
+      <span>RU / EN</span>
+    </div>
+  </div>
+
+  <div class="container hero-cta">
+    <a class="btn btn-primary" href="https://t.me/Olga_WTP" target="_blank" rel="noopener" data-track="cta-hero-tg">
+      Написать Оле <span class="btn-arrow">→</span>
+    </a>
+    <a class="btn btn-ghost" href="#products">узнать больше ↓</a>
+  </div>
+</header>
+
+<!-- ========== PRODUCTS ========== -->
+<section id="products">
+  <div class="container-wide">
+    <div class="section-kicker">Что мы делаем</div>
+    <h2 class="section-title display">Чем помогаем семьям в UAE</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <div class="product-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18"></path><path d="M5 21V10l7-5 7 5v11"></path><path d="M9 21V13h6v8"></path>
+          </svg>
+        </div>
+        <h3>Банк</h3>
+        <p>Открытие счёта, в том числе сложные кейсы. Pre-screen по риску отказа до подачи. Работа с UAE и европейскими банками.</p>
+        <div class="tags"><span class="tag">Onboarding</span><span class="tag">Pre-screen</span><span class="tag">Substance</span></div>
+      </div>
+
+      <div class="product">
+        <div class="product-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="6" width="18" height="14" rx="2"></rect><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path>
+          </svg>
+        </div>
+        <h3>Компания + виза</h3>
+        <p>Mainland / freezone / DIFC. Golden Visa под ключ, включая семью. Продление, сопровождение, MoFA-доверенности.</p>
+        <div class="tags"><span class="tag">Mainland</span><span class="tag">Freezone</span><span class="tag">DIFC</span><span class="tag">Golden Visa</span></div>
+      </div>
+
+      <div class="product">
+        <div class="product-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line>
+          </svg>
+        </div>
+        <h3>Документы</h3>
+        <p>Завещания (Dubai Courts / DIFC), доверенности, представление интересов, наследование, сопровождение по семейным юрисдикциям.</p>
+        <div class="tags"><span class="tag">Wills</span><span class="tag">POA</span><span class="tag">Inheritance</span></div>
+      </div>
+
+    </div>
+
+    <div class="bridge">
+      <strong>Оля = ваша точка входа.</strong> За ней банкир, юрист, visa-менеджер, специалист по недвижимости и Иван (founder).
+      Один разговор — не пять. Вы говорите задачу, мы координируем команду до результата.
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENT BLOCK ========== -->
+<section class="event" id="event">
+  <div class="container-wide">
+    <div class="section-kicker">6 мая · Bluewaters</div>
+    <div class="event-grid">
+
+      <div>
+        <h2 class="display">На встрече с командой Bluewaters</h2>
+        <div class="event-body">
+          <p>
+            Оля и Иван будут на встрече BW в Bluewaters. Формат неформальный, без презентаций.
+          </p>
+          <p>
+            Если у вас открытый вопрос по банку, компании, визе или документам — подходите, поговорим спокойно.
+            Или напишите заранее в Telegram, обсудим на встрече.
+          </p>
+          <p>
+            <strong>Без обязательств, без формата консультация.</strong> Просто познакомиться.
+          </p>
+        </div>
+        <div class="event-cta">
+          <a class="btn btn-primary" href="https://t.me/Olga_WTP" target="_blank" rel="noopener" data-track="cta-event-tg">
+            Написать Оле <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hosts" aria-label="Кто будет на встрече">
+        <div class="host">
+          <div class="host-avatar">О</div>
+          <div>
+            <div class="host-name">Ольга Зуева</div>
+            <div class="host-role">Client Success Manager. Координирует команду WTP2 под задачу клиента.</div>
+          </div>
+        </div>
+        <div class="host">
+          <div class="host-avatar">И</div>
+          <div>
+            <div class="host-name">Иван</div>
+            <div class="host-role">Founder, WTP2. Banking-first подход к семьям HNWI в UAE.</div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FORM ACCORDION ========== -->
+<section class="form-section">
+  <div class="container">
+    <details class="form-acc">
+      <summary>
+        <span>Хочу, чтобы Оля написала мне первая</span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="form-body">
+        <p>Оставьте контакт — Оля свяжется в Telegram в течение 24 часов. Если срочно, лучше сразу <a href="https://t.me/Olga_WTP" target="_blank" rel="noopener">написать</a>.</p>
+
+        <form id="contact-form" onsubmit="return submitForm(event)">
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" required autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="contact">Telegram или WhatsApp</label>
+            <input id="contact" name="contact" type="text" required placeholder="@username или +971..." autocomplete="tel">
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" id="will-attend" name="will-attend">
+            <span>Планирую быть на встрече 6 мая</span>
+          </label>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+          <div class="form-consent">
+            Контакт используется только для связи. Не передаём третьим лицам, в рассылки не добавляем без отдельного согласия.
+          </div>
+        </form>
+
+        <div id="form-success" class="form-success">
+          Спасибо. Открылся диалог с Олей в Telegram — отправьте сообщение, чтобы она увидела ваш контакт.
+          Если ничего не открылось — напишите ей напрямую: <a href="https://t.me/Olga_WTP" target="_blank" rel="noopener">@Olga_WTP</a>.
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container-wide">
+    <div class="footer-row">
+      <div class="footer-brand">WTP2 · Wealth Transfer Platform · Dubai</div>
+      <div class="footer-links">
+        <a href="https://wtp.ae" target="_blank" rel="noopener">wtp.ae</a>
+        <a href="https://t.me/Olga_WTP" target="_blank" rel="noopener">Telegram Оли</a>
+        <a href="mailto:zueva@wtpbrokers.com">email</a>
+      </div>
+    </div>
+    <div class="footer-meta">© 2026 WTP2. Все права защищены.</div>
+  </div>
+</footer>
+
+<script>
+  // Form submit → open Telegram with prefilled message
+  function submitForm(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const willAttend = document.getElementById('will-attend').checked;
+
+    let msg = `Здравствуйте, Оля. Меня зовут ${name}. Контакт для связи: ${contact}.`;
+    if(willAttend){ msg += ' Планирую быть на встрече BW 6 мая.'; }
+    msg += ' Пришла со страницы wtp-bw.';
+
+    const tgUrl = `https://t.me/Olga_WTP?text=${encodeURIComponent(msg)}`;
+    window.open(tgUrl, '_blank', 'noopener');
+
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').classList.add('visible');
+
+    if(window.gtag){
+      gtag('event', 'form_submit', { campaign:'bw_warmup_may6', will_attend: willAttend });
+    }
+    return false;
+  }
+
+  // CTA click tracking placeholder
+  document.querySelectorAll('[data-track]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      if(window.gtag){
+        gtag('event','cta_click',{ cta: el.dataset.track, campaign:'bw_warmup_may6' });
+      }
+    });
+  });
+
+  // UTM capture (стораджим в sessionStorage чтобы можно было прочитать перед submit)
+  (function captureUTM(){
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k=>{
+      if(params.has(k)){ sessionStorage.setItem(k, params.get(k)); }
+    });
+  })();
+</script>
+
+</body>
+</html>
