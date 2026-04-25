@@ -10,7 +10,13 @@
 <meta property="og:title" content="WTP · Banking-First для семей в UAE">
 <meta property="og:description" content="Banking-first методология. Для семей, у которых жизнь и активы уже в нескольких юрисдикциях.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.png">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512x512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,13 +105,8 @@
     display:flex;justify-content:space-between;align-items:center;
     padding:32px 40px;max-width:var(--container-max);margin:0 auto 64px;
   }
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
-  .brand-logo{
-    width:32px;height:32px;border-radius:6px;background:var(--text-primary);
-    display:flex;align-items:center;justify-content:center;color:var(--bg-body);
-    font-family:var(--font-serif);font-style:italic;font-size:18px;
-  }
-  .brand-name{font-family:var(--font-serif);font-size:22px;letter-spacing:-.01em}
+  .brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+  .brand img{display:block;height:36px;width:auto}
   .nav-meta{font-size:12px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em}
 
   /* Buttons */
@@ -321,7 +322,7 @@
   }
   .footer-inner{max-width:var(--container-max);margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;align-items:flex-start}
   .footer-brand-block{max-width:340px}
-  .footer-brand-name{font-family:var(--font-serif);font-size:22px;margin-bottom:8px;color:var(--text-primary)}
+  .footer-logo{display:block;height:32px;width:auto;margin-bottom:14px}
   .footer-tagline{font-size:13px;color:var(--text-tertiary);line-height:1.6}
   .footer-links{display:flex;gap:48px;flex-wrap:wrap}
   .footer-col{display:flex;flex-direction:column;gap:10px;font-size:13px}
@@ -386,9 +387,8 @@
 
 <!-- Nav -->
 <nav class="nav" aria-label="Главная навигация">
-  <a class="brand" href="https://wtp.ae" target="_blank" rel="noopener">
-    <span class="brand-logo">W</span>
-    <span class="brand-name">WTP</span>
+  <a class="brand" href="https://wtp.ae" target="_blank" rel="noopener" aria-label="WTP — главная">
+    <img src="logo-black.svg" alt="WTP" width="120" height="36">
   </a>
   <span class="nav-meta">Banking-First · UAE</span>
 </nav>
@@ -713,7 +713,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand-block">
-      <div class="footer-brand-name">WTP</div>
+      <img src="logo-black.svg" alt="WTP" class="footer-logo">
       <div class="footer-tagline">Wealth Transfer Platform. Banking-First методология для семей с активами в нескольких странах. Dubai · с 2018.</div>
     </div>
     <div class="footer-links">
